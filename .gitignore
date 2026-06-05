@@ -16,3 +16,6 @@
 
 # Superpowers internal
 .superpowers/
+
+# Dependencies
+node_modules/

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerija - Salon Lotus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Salon Lotus" class="nav-logo-img">
+        <span class="nav-logo-text">LOTUS</span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Početna</a></li>
+          <li><a href="usluge.html" data-i18n="nav_services">Usluge</a></li>
+          <li><a href="galerija.html" class="active" data-i18n="nav_gallery">Galerija</a></li>
+          <li><a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a></li>
+          <li><a href="kontakt.html" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langBtnCode">SR</span>
+            <span class="lang-arrow">▼</span>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="sr">SR</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="ru">RU</button>
+          </div>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" data-i18n="nav_home">Početna</a>
+    <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+    <a href="galerija.html" class="active" data-i18n="nav_gallery">Galerija</a>
+    <a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a>
+    <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+    <div class="lang-mobile">
+      <button class="lang-option active" data-lang="sr">SR</button>
+      <button class="lang-option" data-lang="en">EN</button>
+      <button class="lang-option" data-lang="ru">RU</button>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header page-header--gallery">
+    <div class="container">
+      <span class="section-label" data-i18n="lbl_gallery">Naši radovi</span>
+      <h1 data-i18n="h1_gallery">Galerija</h1>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="container">
+      <p style="color:var(--text-muted);margin-bottom:48px;font-size:1.05rem;" data-i18n="gal_subtitle">Pogledajte transformacije koje potvrđuju kvalitet našeg rada.</p>
+
+      <div class="gallery-grid gallery-grid--single">
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija1.png" alt="Tretman 1">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija2.png" alt="Tretman 2">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija3.png" alt="Tretman 3">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija4.png" alt="Tretman 4">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija5.png" alt="Tretman 5">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-img" src="Galerija6.png" alt="Tretman 6">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">LOTUS</span>
+          <span class="footer-tagline" data-i18n="footer_tagline">Vaša oaza lepote u Beogradu.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" data-i18n="nav_home">Početna</a>
+          <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+          <a href="galerija.html" data-i18n="nav_gallery">Galerija</a>
+          <a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a>
+          <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy" data-i18n="footer_rights">© 2026 Salon Lotus. Sva prava zadržana.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pregled slike">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Zatvori">&#x2715;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Prethodna">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Sledeća">&#8594;</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+
+  <!-- Floating Language Switcher -->
+  <div class="lang-float" id="langSwitcher">
+    <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+      <span id="langBtnCode">SR</span>
+      <span class="lang-arrow">▼</span>
+    </button>
+    <div class="lang-dropdown">
+      <button class="lang-option active" data-lang="sr">SR</button>
+      <button class="lang-option" data-lang="en">EN</button>
+      <button class="lang-option" data-lang="ru">RU</button>
+    </div>
+  </div>
+</body>
+</html>

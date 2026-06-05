@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cenovnik - Salon Lotus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Salon Lotus" class="nav-logo-img">
+        <span class="nav-logo-text">LOTUS</span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav_home">Početna</a></li>
+          <li><a href="usluge.html" data-i18n="nav_services">Usluge</a></li>
+          <li><a href="galerija.html" data-i18n="nav_gallery">Galerija</a></li>
+          <li><a href="cenovnik.html" class="active" data-i18n="nav_pricing">Cenovnik</a></li>
+          <li><a href="kontakt.html" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langBtnCode">SR</span>
+            <span class="lang-arrow">▼</span>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="sr">SR</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="ru">RU</button>
+          </div>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Meni"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" data-i18n="nav_home">Početna</a>
+    <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+    <a href="galerija.html" data-i18n="nav_gallery">Galerija</a>
+    <a href="cenovnik.html" class="active" data-i18n="nav_pricing">Cenovnik</a>
+    <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+    <div class="lang-mobile">
+      <button class="lang-option active" data-lang="sr">SR</button>
+      <button class="lang-option" data-lang="en">EN</button>
+      <button class="lang-option" data-lang="ru">RU</button>
+    </div>
+  </div>
+
+  <div class="page-header page-header--pricing">
+    <div class="container">
+      <span class="section-label" data-i18n="lbl_pricing">Transparentne cene</span>
+      <h1 data-i18n="h1_pricing">Cenovnik</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Tab navigation -->
+      <div class="price-tabs-wrap">
+        <div class="price-tabs" role="tablist">
+
+          <button class="price-tab active" data-tab="frizure" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
+            <span data-i18n="cat_hair_title">Frizure</span>
+          </button>
+
+          <button class="price-tab" data-tab="manikir" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.2 5.4-5 7-5 11a5 5 0 0 0 10 0c0-4-3.8-5.6-5-11z"/><path d="M12 17v1"/></svg></span>
+            <span data-i18n="cat_manicure_title">Manikir</span>
+          </button>
+
+          <button class="price-tab" data-tab="pedikir" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+            <span data-i18n="cat_pedicure_title">Pedikir</span>
+          </button>
+
+          <button class="price-tab" data-tab="trepavice" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <span data-i18n="cat_lashes_title">Trepavice i obrve</span>
+          </button>
+
+          <button class="price-tab" data-tab="lice" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12"/><path d="M12 8v4l3 3"/></svg></span>
+            <span data-i18n="cat_facial_title">Tretmani lica</span>
+          </button>
+
+          <button class="price-tab" data-tab="telo" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <span data-i18n="cat_body_title">Tretmani tela</span>
+          </button>
+
+          <button class="price-tab" data-tab="depilacija" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+            <span data-i18n="cat_depil_title">Depilacija</span>
+          </button>
+
+          <button class="price-tab" data-tab="masaza" role="tab">
+            <span class="price-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
+            <span data-i18n="cat_massage_title">Masaža</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="price-panels">
+
+        <div class="price-panel active" data-panel="frizure">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_fen">Fen i oblikovanje</td><td class="price-amount">1.500 RSD</td></tr>
+                <tr><td data-i18n="p_sisanje">Šišanje i feniranje</td><td class="price-amount">2.000 RSD</td></tr>
+                <tr><td data-i18n="p_bojenje_k">Bojenje (kratka kosa)</td><td class="price-amount">3.000 RSD</td></tr>
+                <tr><td data-i18n="p_bojenje_d">Bojenje (duga kosa)</td><td class="price-amount">5.000 RSD</td></tr>
+                <tr><td data-i18n="p_pramenovi">Pramenovi</td><td class="price-amount">4.000 RSD</td></tr>
+                <tr><td data-i18n="p_keratin">Keratinski tretman</td><td class="price-amount">8.000 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="manikir">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_manikir_k">Klasični manikir</td><td class="price-amount">1.200 RSD</td></tr>
+                <tr><td data-i18n="p_gel_lak">Gel lak</td><td class="price-amount">2.000 RSD</td></tr>
+                <tr><td data-i18n="p_trajni_lak">Trajni lak</td><td class="price-amount">1.800 RSD</td></tr>
+                <tr><td data-i18n="p_skidanje">Skidanje gela</td><td class="price-amount">800 RSD</td></tr>
+                <tr><td data-i18n="p_produzavanje">Produžavanje noktiju</td><td class="price-amount">3.500 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="pedikir">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_pedikir_k">Klasični pedikir</td><td class="price-amount">1.500 RSD</td></tr>
+                <tr><td data-i18n="p_pedikir_gel">Pedikir + gel lak</td><td class="price-amount">2.500 RSD</td></tr>
+                <tr><td data-i18n="p_pedikir_med">Medicinski pedikir</td><td class="price-amount">2.000 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="trepavice">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_lift">Lift trepavica</td><td class="price-amount">2.500 RSD</td></tr>
+                <tr><td data-i18n="p_laminacija_trep">Laminacija trepavica</td><td class="price-amount">2.000 RSD</td></tr>
+                <tr><td data-i18n="p_produz_klasik">Produžavanje (klasik)</td><td class="price-amount">3.000 RSD</td></tr>
+                <tr><td data-i18n="p_produz_vol">Produžavanje (volumen)</td><td class="price-amount">4.000 RSD</td></tr>
+                <tr><td data-i18n="p_laminacija_obrva">Laminacija obrva</td><td class="price-amount">2.000 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="lice">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_cistenje">Dubinsko čišćenje lica</td><td class="price-amount">2.500 RSD</td></tr>
+                <tr><td data-i18n="p_hidratacija">Hidratacija lica</td><td class="price-amount">2.000 RSD</td></tr>
+                <tr><td data-i18n="p_piling">Hemijski piling</td><td class="price-amount">3.000 RSD</td></tr>
+                <tr><td data-i18n="p_mezo">Mezoterapija</td><td class="price-amount">4.500 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="telo">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_kav1">Kavitacija (1 tretman)</td><td class="price-amount">3.000 RSD</td></tr>
+                <tr><td data-i18n="p_kav5">Kavitacija (5 tretmana)</td><td class="price-amount">12.000 RSD</td></tr>
+                <tr><td data-i18n="p_rf1">Radiofrekvencija (1 tretman)</td><td class="price-amount">3.500 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="depilacija">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_vosak_noge">Vosak - noge</td><td class="price-amount">2.000 RSD</td></tr>
+                <tr><td data-i18n="p_vosak_bikini">Vosak - bikini</td><td class="price-amount">1.500 RSD</td></tr>
+                <tr><td data-i18n="p_laser_mali">Laser - mali predeo</td><td class="price-amount">2.500 RSD</td></tr>
+                <tr><td data-i18n="p_laser_veliki">Laser - veliki predeo</td><td class="price-amount">6.000 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-panel" data-panel="masaza">
+          <div class="price-wrap">
+            <table class="price-table">
+              <thead><tr><th data-i18n="th_service">Usluga</th><th data-i18n="th_price">Cena</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="p_masaza_relax">Relaksaciona masaža (60 min)</td><td class="price-amount">2.500 RSD</td></tr>
+                <tr><td data-i18n="p_masaza_ledja">Masaža leđa (30 min)</td><td class="price-amount">1.500 RSD</td></tr>
+                <tr><td data-i18n="p_masaza_sport">Sportska masaža (60 min)</td><td class="price-amount">3.000 RSD</td></tr>
+                <tr><td data-i18n="p_masaza_anti">Anticelulit masaža (60 min)</td><td class="price-amount">2.800 RSD</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">LOTUS</span>
+          <span class="footer-tagline" data-i18n="footer_tagline">Vaša oaza lepote u Beogradu.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" data-i18n="nav_home">Početna</a>
+          <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+          <a href="galerija.html" data-i18n="nav_gallery">Galerija</a>
+          <a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a>
+          <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy" data-i18n="footer_rights">© 2026 Salon Lotus. Sva prava zadržana.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+
+  <!-- Floating Language Switcher -->
+  <div class="lang-float" id="langSwitcher">
+    <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+      <span id="langBtnCode">SR</span>
+      <span class="lang-arrow">▼</span>
+    </button>
+    <div class="lang-dropdown">
+      <button class="lang-option active" data-lang="sr">SR</button>
+      <button class="lang-option" data-lang="en">EN</button>
+      <button class="lang-option" data-lang="ru">RU</button>
+    </div>
+  </div>
+</body>
+</html>

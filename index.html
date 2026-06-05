@@ -3,25 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salon Lepote</title>
+  <title>Salon Lotus - Beograd</title>
+  <meta name="description" content="Salon Lotus - profesionalni tretmani lepote u Beogradu. Frizure, manikir, pedikir, masaža, tretmani lica i tela." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Salon Lepote</div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h1>Dobrodošli u naš salon</h1>
-      <p>Profesionalne usluge lepote na jednom mestu.</p>
-    </section>
-  </main>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Salon Lotus" class="nav-logo-img">
+        <span class="nav-logo-text">LOTUS</span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" data-i18n="nav_home">Početna</a></li>
+          <li><a href="usluge.html" data-i18n="nav_services">Usluge</a></li>
+          <li><a href="galerija.html" data-i18n="nav_gallery">Galerija</a></li>
+          <li><a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a></li>
+          <li><a href="kontakt.html" data-i18n="nav_contact">Kontakt</a></li>
+        </ul>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langBtnCode">SR</span>
+            <span class="lang-arrow">▼</span>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-option active" data-lang="sr">SR</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="ru">RU</button>
+          </div>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-  <footer>
-    <p>&copy; 2026 Salon Lepote</p>
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active" data-i18n="nav_home">Početna</a>
+    <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+    <a href="galerija.html" data-i18n="nav_gallery">Galerija</a>
+    <a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a>
+    <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+    <div class="lang-mobile">
+      <button class="lang-option active" data-lang="sr">SR</button>
+      <button class="lang-option" data-lang="en">EN</button>
+      <button class="lang-option" data-lang="ru">RU</button>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text" data-i18n="hero_eyebrow">Vaša oaza lepote</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1>LOTUS</h1>
+      <p class="hero-tagline" data-i18n="hero_tagline">Više od tretmana - iskustvo posvećeno vama</p>
+      <p class="hero-sub" data-i18n="hero_sub">Profesionalni tretmani lepote u srcu Beograda. Prepustite se negovanju tela i duha u Salonu Lotus.</p>
+      <div class="hero-actions">
+        <a href="kontakt.html" class="btn btn-primary" data-i18n="btn_book">Zakaži termin</a>
+        <a href="usluge.html" class="btn btn-outline" data-i18n="btn_view_services">Naše usluge</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== O NAMA ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label" data-i18n="lbl_about">O nama</span>
+          <h2 data-i18n="h2_about">Vaša lepota,<br>naša strast</h2>
+          <p data-i18n="about_p">U Salonu Lotus verujemo da je nega mnogo više od tretmana – to je vreme posvećeno vama. U prijatnom i sofisticiranom ambijentu pružamo usluge koje ističu vašu prirodnu lepotu i vraćaju osećaj harmonije. Svakom klijentu pristupamo individualno, kombinujući stručnost, pažnju i najkvalitetnije proizvode za rezultate koji se vide i osećaju.</p>
+          <a href="usluge.html" class="btn btn-outline-dark" style="margin-top: 8px;" data-i18n="btn_view_services">Naše usluge</a>
+        </div>
+        <div class="about-accent">
+          <div class="about-deco" aria-hidden="true">
+            <svg class="deco-lotus" viewBox="0 0 160 160" fill="none">
+              <ellipse cx="80" cy="80" rx="18" ry="42" fill="currentColor" opacity="0.18"/>
+              <ellipse cx="80" cy="80" rx="18" ry="42" fill="currentColor" opacity="0.18" transform="rotate(45 80 80)"/>
+              <ellipse cx="80" cy="80" rx="18" ry="42" fill="currentColor" opacity="0.18" transform="rotate(90 80 80)"/>
+              <ellipse cx="80" cy="80" rx="18" ry="42" fill="currentColor" opacity="0.18" transform="rotate(135 80 80)"/>
+              <circle cx="80" cy="80" r="10" fill="currentColor" opacity="0.22"/>
+            </svg>
+            <svg class="deco-petal" viewBox="0 0 80 80" fill="none">
+              <ellipse cx="40" cy="40" rx="10" ry="24" fill="currentColor" opacity="0.14"/>
+              <ellipse cx="40" cy="40" rx="10" ry="24" fill="currentColor" opacity="0.14" transform="rotate(60 40 40)"/>
+              <ellipse cx="40" cy="40" rx="10" ry="24" fill="currentColor" opacity="0.14" transform="rotate(120 40 40)"/>
+            </svg>
+          </div>
+          <p class="about-accent-quote" data-i18n="about_quote">„Nega nije luksuz, već izraz ljubavi prema sebi."</p>
+          <span class="about-accent-detail">- Salon Lotus, Beograd</span>
+        </div>
+      </div>
+
+      <!-- Highlights -->
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="5"/>
+              <path d="M15.2 13.4L17 22l-5-3-5 3 1.8-8.6"/>
+            </svg>
+          </div>
+          <h3 data-i18n="h3_hl1">Iskusni tim</h3>
+          <p data-i18n="p_hl1">Naši majstori poseduju višegodišnje iskustvo i kontinuirano se usavršavaju kroz obuke i sertifikate.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9z"/>
+              <path d="M11 3L8 9l4 13 4-13-3-6"/>
+              <line x1="2" y1="9" x2="22" y2="9"/>
+            </svg>
+          </div>
+          <h3 data-i18n="h3_hl2">Premium oprema</h3>
+          <p data-i18n="p_hl2">Koristimo isključivo profesionalnu opremu i visokokvalitetne proizvode renomiranih svetskih brendova.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+          </div>
+          <h3 data-i18n="h3_hl3">Prijatna atmosfera</h3>
+          <p data-i18n="p_hl3">Ambijent osmišljen da vam pruži potpuno opuštanje i uživanje tokom svakog tretmana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2 data-i18n="h2_book_cta">Otkrijte svoju najbolju verziju</h2>
+        <p data-i18n="p_book_cta">Zakažite svoj tretman već danas - kontaktirajte nas telefonom ili putem e-maila.</p>
+        <div class="cta-actions">
+          <a href="tel:+381601234567" class="btn btn-primary" data-i18n="btn_call">Pozovite nas</a>
+          <a href="kontakt.html" class="btn btn-outline" data-i18n="btn_email">Pošaljite email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">LOTUS</span>
+          <span class="footer-tagline" data-i18n="footer_tagline">Vaša oaza lepote u Beogradu.</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" data-i18n="nav_home">Početna</a>
+          <a href="usluge.html" data-i18n="nav_services">Usluge</a>
+          <a href="galerija.html" data-i18n="nav_gallery">Galerija</a>
+          <a href="cenovnik.html" data-i18n="nav_pricing">Cenovnik</a>
+          <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy" data-i18n="footer_rights">© 2026 Salon Lotus. Sva prava zadržana.</span>
+      </div>
+    </div>
   </footer>
 
   <script src="scripts/script.js"></script>
